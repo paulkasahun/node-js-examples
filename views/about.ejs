@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Net Ninja Website | <%= title%></title>
+  <!-- Use the same CSS styles as the main page -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Use the style element to add the CSS code for the about page -->
+  <style>
+    /* This is a CSS code for the about page */
+
+    /* Use the active class to style the current link */
+    ul {
+  list-style-type: none; /* remove the bullets */
+  margin: 0; /* remove the margins */
+  padding: 0; /* remove the padding */
+  overflow: hidden; /* prevent the list items from overflowing */
+  background-color: #333; /* set a dark background color for the nav bar */
+       }
+    .active {
+      background-color:#111; /* change the background color on hover */
+    }
+
+    /* Use the main element to style the main content */
+    main {
+      margin-top: 50px; /* add some space between the nav bar and the main content */
+    }
+
+    /* Use the h2 element to style the page title */
+    h2 {
+      color: #333; /* set the text color to dark gray */
+    }
+
+    /* Use the p element to style the page content */
+    p {
+      font-size: 18px; /* set the font size to 18px */
+      line-height: 1.5; /* set the line height to 1.5 */
+    }
+
+    /* Use the h3 element to style the contact section title */
+    h3 {
+      color: #333; /* set the text color to dark gray */
+    }
+
+    /* Use the ul element to style the contact links */
+   
+
+li {
+  float: left; /* make the list items float next to each other */
+}
+
+li a {
+  display: block; /* make the links fill the whole list item */
+  color: white; /* set the text color to white */
+  text-align: center; /* center the text */
+  padding: 14px 16px; /* add some padding around the text */
+  text-decoration: none; /* remove the underline */
+}
+
+li a:hover {
+  background-color: #111; /* change the background color on hover */
+}
+  </style>
+</head>
+<body>
+  <!-- Use the same nav bar as the main page -->
+  <%- include('./partials/nav.ejs') %>
+  <!-- Use a main element to wrap the main content -->
+  <main>
+    <!-- Use a h2 element for the page title -->
+    <h2>About Net Ninja Website</h2>
+    <!-- Use a p element for the page content -->
+    <p>Net Ninja Website is a blog site where you can find tutorials and tips on web development and design. Whether you are a beginner or an expert, you will find something useful and interesting here. Net Ninja Website is created by Net Ninja, a web developer and designer who loves to share his knowledge and passion with others. Net Ninja has been coding since he was a kid and has worked on many projects and websites. He also has a YouTube channel where he posts videos on web development and design topics. You can follow him on YouTube, Twitter and Facebook.</p>
+    <!-- Use a h3 element for the contact section title -->
+    <h3>Contact Net Ninja</h3>
+    <!-- Use a ul element for the contact links -->
+    <ul>
+      <!-- Use li elements for each contact link -->
+      <!-- Use a elements for each contact link -->
+      <!-- Use the target attribute to open the links in a new tab -->
+      <li><a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="_blank">YouTube</a></li>
+      <li><a href="https://twitter.com/thenetninjauk" target="_blank">Twitter</a></li>
+      <li><a href="https://www.facebook.com/thenetninjauk" target="_blank">Facebook</a></li>
+    </ul>
+  </main>
+  <%- include('./partials/foot.ejs') %>
+</body>
+</html>
+
+

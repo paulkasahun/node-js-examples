@@ -1,0 +1,90 @@
+
+<!-- This is a HTML code for the 404 page -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Net Ninja Website | <%= title%></title>
+  <!-- Use the same CSS styles as the main page -->
+  
+  <!-- Use the style element to add the CSS code for the 404 page -->
+  <style>
+    /* This is a CSS code for the 404 page */
+
+    /* Use the main element to style the main content */
+    main {
+      margin-top: 50px; /* add some space between the nav bar and the main content */
+      text-align: center; /* center the text */
+    }
+    li a {
+  display: block; /* make the links fill the whole list item */
+  color: white; /* set the text color to white */
+  text-align: center; /* center the text */
+  padding: 14px 16px; /* add some padding around the text */
+  text-decoration: none; /* remove the underline */
+}
+    /* Use the h2 element to style the page title */
+    h2 {
+      color: #333; /* set the text color to dark gray */
+      font-size: 36px; /* set the font size to 36px */
+    }
+
+    /* Use the p element to style the page content */
+    p {
+      color: #999; /* set the text color to light gray */
+      font-size: 18px; /* set the font size to 18px */
+    }
+
+    /* Use the a element to style the home link */
+    a {
+      color: #333; /* set the text color to dark gray */
+      text-decoration: none; /* remove the underline */
+      padding: 10px; /* add some padding around the text */
+      border: 1px solid #333; /* add a border around the text */
+      border-radius: 5px; /* make the border rounded */
+    }
+    
+li {
+  float: left; /* make the list items float next to each other */
+}
+    ul {
+  list-style-type: none; /* remove the bullets */
+  margin: 0; /* remove the margins */
+  padding: 0; /* remove the padding */
+  overflow: hidden; /* prevent the list items from overflowing */
+  background-color: #333; /* set a dark background color for the nav bar */
+}
+    /* Use the hover pseudo-class to change the style on hover */
+    a:hover {
+      background-color: #333; /* change the background color on hover */
+      color: white; /* change the text color on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Use PHP to give a 404 error -->
+ 
+  
+  <!-- Use a nav element to wrap the nav bar -->
+  <%- include('./partials/nav.ejs') %>
+  
+  <!-- Use a main element to wrap the main content -->
+  <main>
+    <!-- Use a h2 element for the page title -->
+    <h2>404 - Page Not Found</h2>
+    <!-- Use a p element for the page content -->
+    <p>Sorry, we couldn't find what you were looking for.</p>
+    <p>Maybe you can try one of these options:</p>
+    <!-- Use an ul element for a list of options -->
+    <ul>
+      <li><a href="index.html">Go back to home page</a></li>
+      <li><a href="#">Search for something else</a></li>
+      <li><a href="contact.html">Contact us for help</a></li>
+    </ul>
+  </main>
+  <%- include('./partials/foot.ejs') %>
+</body>
+</html>
+
+
+ 

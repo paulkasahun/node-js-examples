@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Net Ninja Website | <%= title%></title>
+<style>
+/* I added some CSS styles here */
+ul {
+  list-style-type: none; /* remove the bullets */
+  margin: 0; /* remove the margins */
+  padding: 0; /* remove the padding */
+  overflow: hidden; /* prevent the list items from overflowing */
+  background-color: #333; /* set a dark background color for the nav bar */
+}
+
+li {
+  float: left; /* make the list items float next to each other */
+}
+
+li a {
+  display: block; /* make the links fill the whole list item */
+  color: white; /* set the text color to white */
+  text-align: center; /* center the text */
+  padding: 14px 16px; /* add some padding around the text */
+  text-decoration: none; /* remove the underline */
+}
+
+li a:hover {
+  background-color: #111; /* change the background color on hover */
+}
+
+div {
+  margin-top: 50px; /* add some space between the nav bar and the div */
+}
+
+h2 {
+  color: #333; /* set the text color to dark gray */
+}
+
+.blog-post {
+  margin-bottom: 20px; /* add some space between each blog post */
+}
+
+.blog-title {
+  font-weight: bold; /* make the blog title bold */
+}
+
+.blog-date {
+  color: #999; /* set the blog date color to light gray */
+}
+</style>
+</head>
+<body>
+<%- include('./partials/nav.ejs') %>
+<div>
+<h2>All Blogs</h2>
+<!-- I added some blog posts here -->
+<% if (blogs.length>0){%>
+   <%blogs.forEach(blog=>{%>
+       
+ <h1 class="title"><%= blog.title%></h1>
+ <p class="snippet"><%= blog.snippet%></p>
+    <%})%>
+ 
+  <%} else{%>
+
+    <p>There are no blogs to display</p>
+  <% } %>
+  
+<div class="blog-post">
+<p class="blog-title">Lorem Ipsum</p>
+<p class="blog-date">Posted on January 1, 2023</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo vitae lorem consequat tincidunt. Quisque id nisl sit amet lorem blandit ullamcorper. Fusce et nunc quis augue malesuada sagittis.</p>
+</div>
+<div class="blog-post">
+<p class="blog-title">Dolor Sit Amet</p>
+<p class="blog-date">Posted on January 2, 2023</p>
+<p>Dolor sit amet, consectetur adipiscing elit. Sed quis leo vitae lorem consequat tincidunt. Quisque id nisl sit amet lorem blandit ullamcorper. Fusce et nunc quis augue malesuada sagittis.</p>
+</div>
+<div class="blog-post">
+<p class="blog-title">Consectetur Adipiscing Elit</p>
+<p class="blog-date">Posted on January 3, 2023</p>
+<p>Consectetur adipiscing elit. Sed quis leo vitae lorem consequat tincidunt. Quisque id nisl sit amet lorem blandit ullamcorper. Fusce et nunc quis augue malesuada sagittis.</p>
+</div>
+</div>
+<%- include('./partials/foot.ejs') %>
+</body>
+</html>
+
+

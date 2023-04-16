@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netninja | <%= title%></title>
+  
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+  }
+  ul {
+  list-style-type: none; /* remove the bullets */
+  margin: 0; /* remove the margins */
+  padding: 0; /* remove the padding */
+  overflow: hidden; /* prevent the list items from overflowing */
+  background-color: #333; /* set a dark background color for the nav bar */
+}
+
+li {
+  float: left; /* make the list items float next to each other */
+}
+
+li a {
+  display: block; /* make the links fill the whole list item */
+  color: white; /* set the text color to white */
+  text-align: center; /* center the text */
+  padding: 14px 16px; /* add some padding around the text */
+  text-decoration: none; /* remove the underline */
+}
+
+li a:hover {
+  background-color: #111; /* change the background color on hover */
+}
+  button {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+</style>
+
+</head>
+<body>
+  
+    
+  <%- include('./partials/nav.ejs') %>
+  <h1>Netninja</h1>
+  <p>Welcome to Netninja, the blog for web developers.</p>
+  <form action="/create" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="snippet">Snippet:</label>
+    <input type="text" id="snippet" name="snippet" required>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" rows="10" cols="50" required></textarea>
+    <button type="submit">Create</button>
+  </form>
+  <%- include('./partials/foot.ejs') %>
+</body>
+</html>
